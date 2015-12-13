@@ -1,0 +1,27 @@
+{
+  "development": {
+    "host"     : "{{MYSQL_HOST}}",
+    "username" : "{{MYSQL_USERNAME}}",
+    "password" : "{{MYSQL_PASSWORD}}",
+    "database" : "{{MYSQL_DATABASE}}",
+    "dialect":  "mysql",
+    "paranoid": true
+  },
+  "test": {
+    "host"     : "{{MYSQL_HOST}}",
+    "username" : "{{MYSQL_USERNAME}}",
+    "password" : "{{MYSQL_PASSWORD}}",
+    "database" : "{{MYSQL_DATABASE}}",
+    "dialect": "mysql",
+    "paranoid": true
+  },
+  "production": {
+    "host"     : "{{MYSQL_HOST}}",
+    "username" : "{{MYSQL_USERNAME}}",
+    "password" : "{{MYSQL_PASSWORD}}",
+    "database" : "{{MYSQL_DATABASE}}",
+    "dialect":  "mysql",
+    "paranoid": true
+  }
+}
+

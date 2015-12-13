@@ -1,0 +1,14 @@
+{
+  "mysql":{
+    "host"     : "{{MYSQL_HOST}}",
+    "username" : "{{MYSQL_USERNAME}}",
+    "password" : "{{MYSQL_PASSWORD}}",
+    "database" : "{{MYSQL_DATABASE}}",
+    "multipleStatements": true
+  },
+  "redis": {
+    "host": "{{REDIS_HOST}}",
+    "port": {{REDIS_PORT}},
+    "db": {{REDIS_DB}}
+  }
+}

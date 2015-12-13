@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# cd into our directory
+cd /data/server
+
+if [ ! -f /data/installed ]; then
+  /data/install.sh
+fi
+
+# start our node.js application
+exec node server.js;
