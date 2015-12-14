@@ -6,7 +6,7 @@ MAINTAINER Matt Voss "voss.matthew@gmail.com"
 WORKDIR /data/app
 
 # If you have native dependencies, you'll need extra tools
-RUN apk add --update git make gcc g++ python
+RUN apk add --update git make gcc g++ python mysql-client
 
 # Add s6-overlay
 ENV S6_OVERLAY_VERSION v1.17.0.0
@@ -29,7 +29,7 @@ ADD config.json.dist /data/dist/config.json.dist
 ADD server /etc/services.d/app
 
 # Install server with NPM
-RUN cd /data/app  && npm install && npm install -g gulp && npm run deploy
+RUN cd /data/app  && npm install && npm install -g gulp sequelize-cli && npm run deploy
 
 ADD install.sh /data/install.sh
 RUN chmod +x /data/install.sh
@@ -40,5 +40,6 @@ RUN chmod +x /data/run.sh
 RUN apk del make gcc g++ python && \
    rm -rf /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp
 
+EXPOSE 3001
 ENTRYPOINT ["/init"]
 CMD []

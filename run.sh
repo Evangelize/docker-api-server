@@ -1,9 +1,11 @@
-#!/bin/bash
+#!/bin/sh
+
+# cd into our directory
+cd /data/app
 
 if [ ! -f /data/installed ]; then
   /data/install.sh
-  /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
-else
-  /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
 fi
 
+# start our node.js application
+exec npm run prod;
