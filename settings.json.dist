@@ -10,5 +10,47 @@
     "host": "{{REDIS_HOST}}",
     "port": {{REDIS_PORT}},
     "db": {{REDIS_DB}}
+  },
+  "push": {
+    "gcm": {
+      "id": "AIzaSyAHkFdOlJejpUHXajafEHgj1DEqhXEimWs",
+      "options": null,
+      "msgcnt": 1,
+      "dataDefaults": {
+        "delayWhileIdle": false,
+        "timeToLive": 2419200,
+        "retries": 4
+      }
+    },
+    "apn": {
+      "gateway": "gateway.sandbox.push.apple.com",
+      "badge": 1,
+      "defaultData": {
+        "expiry": 2419200,
+        "sound": "ping.aiff"
+      }
+    },
+    "adm": {
+      "client_id": null,
+      "client_secret": null,
+      "expiresAfter": 2419200
+    }
+  },
+  "websocket": {
+    "port": 3002,
+    "host": "ws.int"
+  },
+  "host": "localhost",
+  "port": 3001,
+  "key": "11134ddc-20d3-11e4-98b6-f75b643337ae",
+  "serviceName": "Evangelize",
+  "serviceUrl": "http://api-test.int",
+  "jwtCert": "config/private.pem",
+  "jwtKey": "config/private.key",
+  "s3": {
+    "endPoint": "minio-eu1.evangelize.io",
+    "accessKey": "IJZE87BIVO7K9K94TT10",
+    "secretKey": "grv4srGHlNBfcZjGNemNvowDvvi3UYl/18TV34Ff",
+    "secure": true
   }
 }

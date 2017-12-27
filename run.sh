@@ -8,4 +8,4 @@ if [ ! -f /data/installed ]; then
 fi
 
 # start our node.js application
-exec pm2-docker start --auto-exit --env production process.yml
+exec pm2-docker start --auto-exit --env production pm2-app.json --web
